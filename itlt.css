@@ -78,7 +78,571 @@ background-position: center;
 [style*="opacity: 0.08"] {
   animation: fadeAnim 0.7s 0.4s infinite alternate !important;
 }
+[class*="blob-"]:nth-child(5),@import url('https://kckarnige.is-a.dev/server-scroll/base.css');
+/*User Modal*/
+@import "https://gitcdn.link/cdn/Sureigh/css_snippets/main/src/better_profile.css";
+
+/*Custom Home Icon > you can change teh url to the path/link of your choice*/
+.homeIcon-r0w4ny path {display:none}
+.homeIcon-r0w4ny {
+background-repeat: no-repeat;
+background-image: url(https://media.discordapp.net/attachments/783218074823426068/945577999770738705/output-onlinepngtools_1_1.png);
+background-size: contain;
+background-position: center;
+}
+
+/*Custom favourites Icon > you can change teh url to the path/link of your choice*/
+.wrapper-3kah-n[href^="/channels/@favorites/"] > .childWrapper-1j_1ub{
+  /* i made this icon in 5 minutes, use any url you want */
+  background-image: url(https://media.discordapp.net/attachments/783218074823426068/945208599863525426/output-onlinepngtools_2.png);
+  background-position: center;
+
+  /* might need adjustment depending on the image size */
+  background-size: 100%;
+}
+/* remove original SVG */
+.wrapper-3kah-n[href^="/channels/@favorites/"] > .childWrapper-1j_1ub > svg{
+  display: none;
+}
+
+/* Gradient Server Banners*/
+.header-3OsQeK {
+  box-shadow: none;
+}
+
+.animatedContainer-2laTjx {
+  box-shadow: none;
+}
+
+.animatedContainer-2laTjx::before {
+  background: linear-gradient(transparent 0%, var(--background-secondary) 100%, transparent 0%);
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Spinning + button*/
+
+@keyframes spindefault {
+  from {
+     transform:rotate(0deg);
+  }
+  to {
+     transform:rotate(360deg);
+  }
+}
+.circleIconButton-1VxDrg:hover .circleIcon-3489FI{
+  animation: spindefault 1s linear infinite;
+}
+
+/* loading animation*/
+[class*="blob-"]:nth-child(1),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.1s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(2),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.2s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(3),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.3s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(4),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.4s infinite alternate !important;
+}
 [class*="blob-"]:nth-child(5),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.5s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(6),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.6s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(7),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.7s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(8),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.8s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(9),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 0.9s infinite alternate !important;
+}
+[class*="blob-"]:nth-child(10),
+[style*="opacity: 0.03"],
+[style*="opacity: 0.08"] {
+  animation: fadeAnim 0.7s 1s infinite alternate !important;
+}
+@keyframes fadeAnim {
+  from {
+    filter: opacity(1);
+  }
+  to {
+    filter: opacity(0.4);
+  }
+}
+
+/*Adds a little animation to the new file upload tray*/
+@keyframes expand_attachment_area {
+    from {
+        height: 0;
+    }
+    to {
+        height: 218px;
+    }
+}
+ul[class*="channelAttachmentArea-"] {
+    animation-name: expand_attachment_area;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+/*enlarges buttons on hover*/
+button[class*="color"] {
+    transform: scale(1);
+    transition: .2s ease-in-out;
+}
+button[class*="color"]:hover {
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+}
+
+/*left role icons*/
+[class*="roleIcon"] {
+    float: left;
+    margin-left: 0rem;
+    margin-right: .25rem;
+}
+
+/*user thing below-*/
+/* the main bit! */
+.container-YkUktl {
+  position: fixed;
+  left: 4px;
+  top: calc(100% - 52px);
+  width: 292px;
+  background-color: var(--background-tertiary);
+}
+
+/* PATCH for scrollers above the user panel to make space */
+.guilds-2JjMmN, /* servers */
+.sidebar-1tnWFu /* channels */ {
+  height: calc(100% - 52px);
+}
+
+/*Colored profile modal border*/
+:root {
+    --profile-border-width: 2px
+}
+.root-8LYsGj {
+    padding: var(--profile-border-width);
+    border-radius: 10px;
+}
+.topSection-13QKHs {
+    margin-top: 239px;
+}
+.topSection-13QKHs .banner-1YaD3N {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-size: calc(100% - calc(var(--profile-border-width) * 2));
+    background-position: center var(--profile-border-width);
+    z-index: -1;
+}
+.topSection-13QKHs .banner-1YaD3N::after {
+    content: '';
+    margin: calc(var(--profile-border-width) - 2px);
+    display: block;
+    background-color: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    width: 100%;
+    height: 244px;
+    clip-path: path("M 0 0 V 12 H 2 Q 2 2 12 2 V 0 Z M 604.5 0 V 12 H 602.5 Q 602.5 2 592.5 2 V 0 Z");
+}
+.header-S26rhB {
+    top: -76px;
+}
+.body-1Ukv50 {
+    border-radius: 0 0 8.5px 8.5px;
+}
+/*colored action buttons*/
+#message-actions-pin, #message-pin, #message-unpin{
+    color: skyblue;
+}
+#message-actions-pin:hover, #message-pin:hover, #message-unpin:hover {
+    background-color: #67a7c0;
+    color: #fff;
+}
+#message-actions-reply, #message-reply {
+    color: khaki;
+}
+#message-actions-reply:hover, #message-reply:hover {
+    background-color: #c5bb5d;
+    color: #fff;
+}
+#message-actions-thread, #message-thread {
+    color: #69c069;
+}
+#message-actions-thread:hover, #message-thread:hover {
+    background-color: #5dbd5d;
+    color: #fff;
+}
+#message-actions-mark-unread, #message-mark-unread {
+    color: plum;
+}
+#message-actions-mark-unread:hover, #message-mark-unread:hover {
+    background-color: #c27ec2;
+    color: #fff;
+}
+#message-actions-copy-link, #message-copy-link {
+    color: lightseagreen;
+}
+#message-actions-copy-link:hover, #message-copy-link:hover {
+    background-color: #199c96;
+    color: #fff;
+}
+#message-actions-tts, #message-tts{
+    color: var(--brand-experiment);
+}
+#message-actions-tts:hover, #message-tts:hover{
+    background-color: var(--brand-experiment);
+    color: #fff;
+}
+#message-actions-copy-id, #message-devmode-copy-id {
+    color: lightsalmon;
+}
+#message-actions-copy-id:hover #message-devmode-copy-id:hover{
+    background-color: lightsalmon;
+    color: #fff;
+}
+#message-edit, #message-actions-edit{
+    color: steelblue;
+}
+#message-edit:hover,  #message-actions-edit:hover{
+    background-color: steelblue;
+    color: #fff;
+}
+#message-add-reaction{
+    color: goldenrod;
+}
+#message-add-reaction:hover{
+    background-color: goldenrod;
+    color: #fff;
+}
+
+
+/* Shrunken Search Bar */
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"] {
+    background: none;
+    width: 24px;
+    color: var(--color-text);
+    transition: width 0.2s, padding 0.5s;
+    padding: 0 !important;
+}
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"] [class*="iconContainer-"] {
+    width: 24px !important;
+    height: 24px;
+    cursor: pointer !important;
+}
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"] svg {
+    color: var(--color-text);
+    width: 24px;
+    height: 24px;
+    padding: 0.5px;
+}
+[class*="toolbar-"] > [class*="search-"] > [class*="open-"] [class*="searchBar-"] {
+    width: 300px;
+    padding: 0 10px !important;
+}
+[class*="toolbar-"] > [class*="search-"] > [class*="open-"] [class*="searchBar-"] svg {
+    color: var(--text-muted);
+    transform: scale(0.8);
+}
+
+/* bigger status*/
+a>.assetsLargeImageUserPopout-pY2WJv[src^="https://i.scdn.co/image/"]{
+width:50px;
+height:50px;
+transition: all 1s;
+}
+a>.assetsLargeImageUserPopout-pY2WJv[src^="https://i.scdn.co/image/"]:hover {
+width:100px;
+height:100px;
+transition: all 1s;
+}
+
+/* Rounded Context Menu */
+.menu-1QACrS, .colorDefault-CDqZdO { 
+    border-radius: 15px; 
+}
+
+/* Emoji Auto-Fill Animation */
+.base-2v-uc0 {
+    transition: all 0.5s;
+}
+.base-2v-uc0:hover {
+    transition: all 0s;
+    transform: scale(1.02);
+}
+
+/* Pop-out Animation */ 
+.menu-1QACrS, .emojiPicker-6YCk8a, .browser-mnQ1T7, .messagesPopoutWrap-3zryHW, .wrapper-1NB3WY, .container-3u7RcY, .container-2o3qEW, .container-2ebMPP, .userPopout-2j1gM4 {
+    animation: custom-menu-animation 250ms ease;
+    transform-origin: top;
+}
+@keyframes custom-menu-animation {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/*disable discord's laggy settings animation*/
+.layer-86YKbF {transform: none !important;opacity: 1 !important;}
+.layers-OrUESM>.layer-86YKbF.animating-1rIrGV *,
+.layers-OrUESM>.layer-86YKbF.animating-1rIrGV {pointer-events: auto !important;will-change: unset;}
+.animating-1rIrGV.stop-animations {z-index: 100 !important;}
+
+/* settings/deafen/mute buttons animated */
+.button-12Fmur:hover .contents-3ca1mk {animation: UserModalButtons 0.5s normal ease;}
+  .container-YkUktl .noWrap-hBpHBz {width: 100px;opacity: 1;}
+  .button-12Fmur {transition: 0.2s;}
+  .button-12Fmur:hover {padding-bottom: 0px;transition: 0.2;}
+  @keyframes UserModalButtons {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+
+/* Replace Wandering Cubes Spinner with gif*/
+span[class="inner-26JK4f"]:after {
+    background-image: url('https://media1.giphy.com/media/2uQJxtdE8UiVN6HLIp/giphy.gif?cid=6c09b952qaftdo2iqopcjb25hv09q2z920gxoyvilej3hiqm&rid=giphy.gif&ct=s');
+    background-size: cover;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    content:"";
+}
+span[class="inner-26JK4f"] > *{
+    display: none;
+}
+
+/*Hide User Buttons until hover*/
+.panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :not(:last-child) {
+    opacity: 0% !important;
+    width: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+.panels-3wFtMD > .container-YkUktl:hover .flex-2S1XBF > :not(:last-child) {
+    opacity: 100% !important;
+    width: 32px;
+}
+
+/*emote fix*/
+img.emote {
+    text-indent: 0;
+    white-space: nowrap;
+    width: auto;
+    position: relative;
+    top: 0.25ex;
+}
+
+/*show gif and sticker buttons only on hover*/
+[aria-label="Send en gave"],
+[aria-label="Ein Geschenk senden"],
+[aria-label="Send a gift"],
+[aria-label="Enviar un regalo"],
+[aria-label="Envoyer un cadeau"],
+[aria-label="Pošalji poklon"],
+[aria-label="Invia un regalo"],
+[aria-label="Siųsti dovaną"],
+[aria-label="Ajándék küldése"],
+[aria-label="Verstuur een cadeau"],
+[aria-label="Wyślij prezent"],
+[aria-label="Enviar um presente"],
+[aria-label="Trimite un cadou"],
+[aria-label="Lähetä lahja"],
+[aria-label="Skicka en gåva"],
+[aria-label="Tặng một món quà"],
+[aria-label="Bir hediye gönder"],
+[aria-label="Odeslat dárek"],
+[aria-label="Στείλτε ένα δώρο"],
+[aria-label="Изпрати подарък"],
+[aria-label="Отправить подарок"],
+[aria-label="Надіслати подарунок"],
+[aria-label="ส่งของขวัญ"],
+[aria-label="发送礼物"],
+[aria-label="ギフトを贈る"],
+[aria-label="發送禮物"],
+[aria-label="선물 보내기"] {
+    position: absolute;
+    top: 5px;
+    right: 90px;
+    z-index: 1;
+}
+.expression-picker-chat-input-button:nth-child(3) button {
+  padding: 0px 2px;
+  padding-top: 5px;
+}
+.expression-picker-chat-input-button:nth-child(2),
+.expression-picker-chat-input-button:nth-child(3) {
+    position: fixed;
+    bottom: 37px;
+    margin-bottom: 0px;
+    background-color: var(--channeltextarea-background);
+    border-radius: 10px 10px 0px 0px;
+    animation: slideDown .4s;
+    opacity: 0;
+    z-index: -1;
+}
+.buttons-uaqb-5:hover .expression-picker-chat-input-button:nth-child(2) {
+     animation: slideUp .4s forwards;
+     opacity: 1;
+}
+.buttons-uaqb-5:hover .expression-picker-chat-input-button:nth-child(3) {
+     z-index: -101;
+     animation: slideUp2 .4s forwards;
+     opacity: 1;
+}
+@keyframes slideUp {
+  to {
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+  }
+}
+@keyframes slideUp2 {
+  to {
+      margin-bottom: 60px;
+      padding-bottom: 10px;
+  }
+}
+@keyframes slideDown {
+  from {
+      margin-bottom: 37px;
+}
+  to {
+      margin-bottom: 0px;
+  }
+}
+
+/* Spotify Covers Go Wheeeee */
+/* profile */
+.assetsLargeImageSpotify-17ME3M {
+  animation: spin 3s linear infinite;
+  border-radius: 50%
+}
+/* spotify controls pc */
+.spotify-cover {
+  animation: spin 3s linear infinite;
+}
+/* the animation  */
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*no clamped about me*/
+
+.clamped-2ZePhX {
+  -webkit-line-clamp: unset;
+}
+
+.form-3gdLxP {
+  padding: 0px;
+}
+
+.inner-NQg18Y {
+  padding-top: 4px;
+}
+
+/*make message input span the bottom of the message scroller and match the height of the user panel*/
+.channelTextArea-1VQBuV {
+  margin-bottom: 0px;
+}
+
+.base-3bcbY3 {
+  top: -24px;
+  left: 0px;
+  width: fit-content;
+  padding-right: 9px;
+  border-radius: 0 8px 0 0;
+  background-color: var(--channeltextarea-background);
+}
+
+.scrollableContainer-15eg7h {
+  border-radius: 0px;
+  min-height: 53px;
+}
+
+/* edited text */
+.timestamp-p1Df1m:not(.timestampInline-_lS3aK, .timestampVisibleOnHover-9PEuZS) time::after {
+        content: " (" attr(aria-label) ")";
+        color: var(--text-muted);
+        font-size: 0.625rem;
+        font-weight: 400;
+        line-height: 1;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-transform: lowercase;
+}
+
+.edited-1v5nT8:not(.message-translate-indicator) {
+    display: none;
+}
+
+/* Re-round Spotify Status Images */
+.assetsLargeImageSpotify-17ME3M{border-radius:8px;}
+
+/** Square ping icons */
+.numberBadge-37OJ3S {
+    background-clip: padding-box;
+    border-radius: 3px;
+    line-height: 12px;
+    height: unset !important;
+    padding: 3px 4px !important;
+    min-width: 18px !important;
+    width: auto !important;
+}
+
+.container-YkUktl>.flex-2S1XBF>button {
+    transform: scale(0.7)
+}
+
+
 [style*="opacity: 0.03"],
 [style*="opacity: 0.08"] {
   animation: fadeAnim 0.7s 0.5s infinite alternate !important;
